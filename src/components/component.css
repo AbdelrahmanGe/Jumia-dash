@@ -1,0 +1,40 @@
+.nav-link a{
+   
+    text-decoration: none;
+    color: rgb(20, 20, 20) !important;
+    font-size:30px;
+    padding:10px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link a:hover {
+
+border-bottom: 2px solid rgb(231, 85, 0);
+
+}
+.navbar-brand{
+ 
+   
+}
+.navbar-brand a{
+    font-size:40px;
+    color: rgb(19, 19, 19) !important;
+    font-weight: bold  !important;
+    text-decoration: none; 
+    
+}
+
+
+.navbar-nav{
+  
+    width:60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+   
+}
+.header_nav{
+  background-color: white !important;
+  width:100%;   
+}

@@ -1,0 +1,309 @@
+.admin{
+    background-color: whitesmoke;
+}
+
+.sidebar{
+    width:100%;
+    height:1000px;    
+}
+.flex{
+display: flex;
+justify-content: space-around;
+
+}
+.flex-column{
+    background-color: rgb(8, 0, 42);
+    position: fixed;
+    width:20%;
+    padding:20px;
+    height:100%;
+    padding-top:160px;
+}
+.nav_admin{
+    width:100%;
+    height:100px;
+    position:fixed;
+    background-color:rgb(255, 255, 255);
+    box-shadow:4px 0px 4px gray;
+    z-index:10;
+}
+.pp{
+    transform: translateY(200px);
+}
+.sidebar li a{
+
+    padding:10px;
+    margin:10px 0px 10px 0px;
+    color: lightgray;
+font-size:20px;
+font-family: 'Segoe UI'; 
+transition:.3s;   
+}
+.show_up{
+padding:20px;  
+width:400px;
+position: absolute;
+left:0px;
+}
+.show_up>*{
+    text-decoration: none;
+    color: black;
+    font-size:23px;
+}
+.show_up li a {
+    color: black;
+    font-size:23px;
+}
+.show_up li a:hover{
+color: orangered;
+
+}
+
+.up .dropdown-menu .show{
+background-color: yellow !important;
+}
+
+.drop button , .up button {
+    background-color: white !important;
+    color: rgb(0, 0, 0);
+    font-size:30px;
+    border: none;
+}
+.container-fluid{
+    background-color: whitesmoke;
+}
+.drop button:hover{
+    color: black;
+}
+.sidebar li a:hover{
+    background-color: rgba(35, 154, 251, 0.883);
+    color: white;
+    border-radius:0px 20px 20px 0px;
+
+}
+
+.box_one{
+padding:20px;
+background-color: white;
+border-radius:20px;
+box-shadow:2px 2px 4px lightgray ,-2px -2px 5px lightgray ;
+
+
+
+}
+.m{
+    margin-top: 100px;
+    margin-bottom:20px;
+}
+.user_box{
+    width:100%;
+    background-color: white;
+
+
+}
+.card_user{
+width:100%;
+padding:10px;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+
+}
+
+
+.title_stack{
+    background-color: rgb(21, 18, 37);
+    width:100%;
+   transform: translateY(-20px);
+
+  padding:20px;
+
+}
+.title_stack h1{
+    color: white;
+    font-size:50px;
+}
+
+.header_user{
+    background-color:rgb(15, 107, 255);
+    font-size:30px;
+}
+
+.header_user div h5{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.align{
+text-align: center;
+}
+
+.Analytics h3{
+    color: rgb(47, 47, 47);
+    font-weight: normal;
+}
+
+.co{
+ 
+   
+    padding:10px;
+   
+}
+.co div div{
+border-radius:10px;
+transition:.8s ease-in-out;
+width:97% !important;
+padding:10px;
+}
+
+.co div div:hover{
+transform:scale(1.1);
+}
+
+.co span{
+    background-color: white;
+    border-radius:100%;
+    padding:10px;
+}
+
+.co span i{
+    font-size:40px;
+}
+
+.ti{
+    color: white;
+    font-size:25px;
+}
+
+:root{
+    --OneColor:rgb(55, 141, 255);
+    --twoColor:rgb(255, 5, 109);
+}
+.b{
+background-color:var(--OneColor);
+}
+.r{
+background-color: rgb(255, 5, 109);
+}
+.i{
+background-color: rgb(201, 23, 255);
+}
+.g{
+background-color: rgb(56, 56, 56);
+}
+.bb{
+    color:var(--OneColor);
+}
+.rr{
+    color:var(--twoColor);
+}
+.ii{
+    color:rgb(201, 23, 255);
+}
+.gg{
+    color:rgb(54, 54, 54);
+}
+
+.admin-pic{
+    transform: translateY(-100px);
+    border-radius:20px;
+}
+.p{
+    padding:20px;
+}
+.order_table{
+    width:100%;
+    overflow: scroll;
+    background-color: white;
+    height:600px;
+   
+}
+.title_head{
+  margin-bottom:50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+table{
+background-color: rgb(255, 255, 255);
+padding:50px;
+display: block;
+padding-top:2px;
+}
+tr{
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+    padding-top:2px;
+    cursor: pointer;
+    font-size:23px; 
+    border-bottom:1px solid lightblue;
+}
+tr:not(.tb_h):hover{
+    box-shadow:4px 2px 1px rgb(194, 194, 194),-2px -2px 1px rgb(197, 197, 197);
+    margin:2px;
+    border:3px solid white;
+    background-color: whitesmoke;
+  color:rgb(15, 107, 255)
+}
+
+.prod_btn{
+    border: none;
+    outline: none;
+    padding:10px;
+    color:white;
+    margin:5px;
+    display: block;
+    
+    background-color: rgb(255, 23, 166);
+}
+
+.prod_btn:hover{
+    text-decoration: none;
+    color: white;
+   background-color: rgba(39, 39, 39, 0.548);
+}
+
+.rat{
+    border-radius:20px;
+    background-color: rgb(63, 255, 5);
+    padding:5px;
+    width:70px;
+}
+
+.gre{
+background-color: rgb(43, 255, 0);
+}
+td{
+    padding:30px;
+}
+
+th{
+    padding:30px;
+}
+
+.nav_hidden{
+    display:none;
+}
+
+
+@media only screen and (max-width:1090px){
+.col-a-10{
+    width:30%;
+}
+
+.sidebar{
+    display: none; 
+}
+.media-col{
+display: none;
+}
+
+.drop{
+    display: none;
+}
+
+.nav_hidden{
+    display: block;
+}
+
+
+}
