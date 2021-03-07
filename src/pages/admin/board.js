@@ -4,12 +4,13 @@ import Button from 'react-bootstrap/Button'
 import{Line} from 'react-chartjs-2'
 import {Bar} from 'react-chartjs-2'
 import {Doughnut} from 'react-chartjs-2'
-import { Addproduct, GetClients, GetOrders, GetProducts } from "../../networks/Api";
+import { Addproduct, GetClients, GetOrders, GetAllAdmins,GetProducts } from "../../networks/Api";
+import { useHistory } from "react-router";
 
 export default  function Board(params) {
 
 
-
+let history=useHistory()
 let [ratingSales , SetretingSales]=useState([])
 
 let [inputinfo , setinputinfo]=useState({
@@ -38,7 +39,19 @@ let [cl , setcli]=useState('')
 let [ord, setord]=useState('')
 let [pro, setpro]=useState('')
 let [sales, setSales]=useState('')
+let [adminsc, setadminsc]=useState([])
 useEffect(()=>{
+
+GetAllAdmins().then((data)=>{
+
+setadminsc([...data.data])
+
+}).catch((err)=>{console.log(err)})
+
+
+
+
+
 GetOrders().then((data)=>{
 setord(data.data.length)
 let m=sumSales(data.data)
@@ -129,18 +142,77 @@ setinputinfo({
 })
 }
 
+function AdminACCount() {
+  
+history.push('/dash/partner')
 
+}
+
+const [showa, setShowa] = useState(false);
+
+const handlekClose = () => setShowa(false);
+const handlekShow = () => setShowa(true);
     return(<>
-    
-
-
-
+  
 <div className='container-fluid'>
-
-
 <div className='row box_one '>
 
 <div className='col-lg-12 center_box'>
+
+<Button variant="primary" onClick={handlekShow}>
+        Admins
+      </Button>
+
+      <Modal show={showa} onHide={handlekClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Admins Account</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+        <div className="row">
+  <div className='fox'>
+   <h1>Fullname</h1> 
+  </div>
+  <div className='fox'>
+    <h1>Email</h1>
+  </div>
+</div>
+
+ {adminsc&&adminsc.map((data,index)=>{
+return(
+<div className="row nice">
+  <div className='fox'>
+   <p>{data.fullName}</p> 
+  </div>
+  <div className='fox'>
+    <p>{data.email}</p>
+  </div>
+</div>
+)
+ })}
+          
+          
+          </Modal.Body>
+        <Modal.Footer>
+
+
+          <Button variant="secondary" onClick={handlekClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+   
+
+
+
+
+
+
+
+
+<Button variant="primary" onClick={AdminACCount}>
+       Create new Account
+      </Button>
 
 <Button variant="primary" onClick={handleShow}>
        Add New Product
@@ -179,10 +251,6 @@ setinputinfo({
   <div className="form-group">
     <label >brand</label>
     <input type="text" name='brand'      value={inputinfo.brand} onChange={getval}  className="form-control"></input>
-  </div>
-  <div className="form-group">
-    <label >Max-qty</label>
-    <input type="range" name='max_qty'   value={inputinfo.max_qty} onChange={getval}    min='1' max='100' className="form-control"></input>
   </div>
   <div className="form-group">
     <label >Discount</label>

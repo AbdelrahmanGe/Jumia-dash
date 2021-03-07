@@ -109,7 +109,7 @@ return(<tr key={index}>
 <td>{data.price}</td>
 <td>{data.category}</td>
 <td>{data.countInStock}</td>
-<td> <p className='rat'>{data.rating}</p> </td>
+<td> <p className='rat'>{data.rating.toString().slice(0,3)}</p> </td>
 <td>
 <Link className='prod_btn' to={{pathname:`/dash/edit/${data._id}` , state:data}}   > Update</Link>
 <button className='prod_btn gre' onClick={()=>delateProudct(data._id)} > Delete</button>

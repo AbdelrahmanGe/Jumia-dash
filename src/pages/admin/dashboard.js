@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import logo from '../../imgs/1.png'
 import Loading from "../../load";
+import AdminFriend from "./AdminFre";
 export default function AdminDashboard() {
 
 
@@ -132,6 +133,7 @@ setlocal(lo)
 <Route path='/dash/client' exact component={Client} ></Route>
 <Route path='/dash/profile' exact component={Profile} ></Route>
 <Route path='/dash/edit/:id' exact component={Edit} ></Route>
+<Route path='/dash/partner' exact component={AdminFriend} ></Route>
 </Switch>
 
 

@@ -88,10 +88,21 @@ headers:{
 }
 
 
-export const GetLikes=()=>{
+export const deleteOrder=(id)=>{
+
+return axios.delete(url+'/api/orders/'+id)
+
+}
 
 
+export const DeleteUser=(id)=>{
+return axios.delete(url+'/api/user/register/'+id)
 
+}
+
+
+export const GetAllAdmins=()=>{
+return axios.get(url+'/api/admin/register')
 }
 
 

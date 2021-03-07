@@ -81,13 +81,19 @@ background-color: yellow !important;
     border-radius:0px 20px 20px 0px;
 
 }
+.pend{
+
+    border-radius:20px;
+    padding:10px;
+background-color: rgba(255, 149, 50, 0.76);
+}
+
 
 .box_one{
 padding:20px;
 background-color: white;
 border-radius:20px;
 box-shadow:2px 2px 4px lightgray ,-2px -2px 5px lightgray ;
-
 
 
 }
@@ -195,6 +201,19 @@ background-color: rgb(56, 56, 56);
 .bb{
     color:var(--OneColor);
 }
+.fox{
+    width:40%;
+    padding:10px;
+    
+}
+.nice:hover{
+font-size:20px;
+box-shadow:2px 2px 2px blue;
+cursor: pointer;
+background-color: whitesmoke;
+}
+
+
 .rr{
     color:var(--twoColor);
 }
